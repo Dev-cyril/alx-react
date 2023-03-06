@@ -5,11 +5,18 @@ import Login from "../Login/Login";
 import Footer from "../Footer/Footer";
 import CourseList from "../CourseList/CourseList";
 import PropTypes from "prop-types";
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom'
+import BodySection from '../BodySection/BodySection'
 import "./App.css";
 import { getLatestNotification } from "../utils/utils";
 import { Component } from 'react';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
 
   listCourses = [
     { id: 1, name: "ES6", credit: 60 },
@@ -23,7 +30,14 @@ class App extends Component {
     { id: 3, type: "urgent", html: getLatestNotification() },
   ];
 
-  render () {
+  handleKeyPress(e) {
+    if (e.ctrlKey && e.key === "h") {
+      alert("Logging you out");
+      this.props.logOut();
+    }
+  }
+
+  render() {
     return (
       <React.Fragment>
         <div className="App">
@@ -31,7 +45,17 @@ class App extends Component {
             <Notifications listNotifications={this.listNotifications} />
             <Header />
           </div>
-          {this.props.isLoggedIn ? <CourseList listCourses={this.listCourses} /> : <Login />}
+          {this.props.isLoggedIn ? <BodySectionWithMarginBottom title='Course list'>
+              <CourseList listCourses={this.listCourses} />
+          </BodySectionWithMarginBottom> : <BodySectionWithMarginBottom title='Log in to continue'>
+              <Login />
+            </BodySectionWithMarginBottom>}
+          <BodySection title='News from the School'>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at tempora odio, necessitatibus repudiandae reiciendis cum nemo sed asperiores ut molestiae eaque aliquam illo ipsa
+              iste vero dolor voluptates.
+            </p>
+          </BodySection>
           <Footer />
         </div>
       </React.Fragment>
