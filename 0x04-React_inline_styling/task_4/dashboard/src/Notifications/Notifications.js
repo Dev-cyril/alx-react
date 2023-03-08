@@ -70,6 +70,29 @@ class Notifications extends Component {
   }
 }
 
+const opacityKeyframes = {
+    'from': {
+        opacity: 0.5,
+    },
+
+    'to': {
+        opacity: 1,
+    }
+};
+
+const translateKeyframes = {
+    '0%': {
+        transform: 'translateX(0)',
+    },
+
+    '50%': {
+        transform: 'translateX(-5px)',
+    },
+
+    '100%': {
+        transform: 'translateX(5px)',
+    },
+};
 
 const styles = Stylesheet.create({
   Notifications: {
@@ -98,6 +121,13 @@ const styles = Stylesheet.create({
 
   menuItem: {
     textAlign: 'right',
+    backgroundColor: '#fff8f8',
+    ":hover": {
+      cursor: "pointer",
+      animationName: [opacityAnim, bounceAnim],
+      animationDuration: "1s, 0.5s",
+      animationIterationCount: "3",
+    },
   },
 
   '[data-notification-type="default"]': {
