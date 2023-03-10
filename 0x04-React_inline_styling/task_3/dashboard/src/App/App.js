@@ -63,7 +63,7 @@ class App extends Component {
   }
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   app: {
     height: '100vh',
     maxWidth: '100vw',

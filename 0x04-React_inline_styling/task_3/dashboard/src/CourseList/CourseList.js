@@ -22,7 +22,7 @@ function CourseList({ listCourses }) {
   );
 }
 
-const style = Stylesheet.create({
+const style = StyleSheet.create({
   table: {
     marginTop: '2em',
     width: '100%',
@@ -47,7 +47,7 @@ const style = Stylesheet.create({
 
   tr: {
     'nth - child(2)': {
-      textAlign: left;
+      textAlign: left,
     }
   },
 })

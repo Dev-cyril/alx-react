@@ -13,7 +13,7 @@ function Header() {
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   header: {
   fontSize: '1.4rem',
   color: '#e0354b',
@@ -23,8 +23,8 @@ const styles = Stylesheet.create({
 },
 
 img: {
-  width: 200;
-  height: 200;
+  width: 200,
+  height: 200,
 }
 })
 export default Header;

@@ -15,7 +15,7 @@ class NotificationItem extends Component {
   }
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   default: {
     color: 'blue',
     '@media (max-width: 900px)': {
@@ -23,7 +23,7 @@ const styles = Stylesheet.create({
       width: "100vw",
       marginLeft: "auto",
       marginRight: "auto",
-      padding : 10 8,
+      padding : '10px 8px',
       fontSize: 20,
       borderBottomColor: 'black',
     },
@@ -36,7 +36,7 @@ const styles = Stylesheet.create({
       width: "100vw",
       marginLeft: "auto",
       marginRight: "auto",
-      padding : 10 8,
+      padding: '10px 8px',
       fontSize: 20,
       borderBottomColor: 'black',
     },

@@ -71,7 +71,7 @@ class Notifications extends Component {
 }
 
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   Notifications: {
     padding: '1em',
     border: '2px dashed red',

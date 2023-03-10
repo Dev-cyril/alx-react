@@ -18,7 +18,7 @@ function Login() {
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   body: {
   fontSize: '1rem',
   padding: '2em',

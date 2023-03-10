@@ -16,7 +16,7 @@ class bodySectionWithMargin extends Component {
 }
 
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
     bodySectionWithMargin: {
         marginBottom: '40px',
     }

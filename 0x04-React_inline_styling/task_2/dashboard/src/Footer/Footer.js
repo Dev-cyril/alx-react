@@ -12,7 +12,7 @@ function Footer() {
   );
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   footer: {
     fontSize: '1rem',
     padding: '1.2rem',

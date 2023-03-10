@@ -15,7 +15,7 @@ class NotificationItem extends Component {
   }
 }
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   default: {
     color: 'blue',
   },

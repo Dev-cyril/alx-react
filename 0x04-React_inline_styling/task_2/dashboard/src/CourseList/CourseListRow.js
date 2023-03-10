@@ -26,7 +26,7 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
 }
 
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
   default: {
     backgroundColor: "#f5f5f5ab",
   },
