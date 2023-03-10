@@ -7,7 +7,7 @@ import { Stylesheet, css } from 'aphrodite'
 
 function CourseList({ listCourses }) {
   return (
-    <table id="CourseList" className={css(styles.table)}>
+    <table id="CourseList" className={css(style.table)}>
       <thead>
         <CourseListRow textFirstCell="Available courses" isHeader={true} />
         <CourseListRow textFirstCell="Course name" textSecondCell="Credit" isHeader={true} />
@@ -50,7 +50,7 @@ const style = StyleSheet.create({
       textAlign: 'left',
     }
   },
-})
+});
 
 CourseList.propTypes = {
   listCourses: PropTypes.arrayOf(CourseShape),
